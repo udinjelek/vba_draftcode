@@ -39,6 +39,11 @@ Private Sub createFolder()
 	
 End Sub
 
+'===================== check file exist
+Function isFileExist(pathFileCheck)
+    isFileExist = CreateObject("Scripting.FileSystemObject").FileExists(pathFileCheck)
+End Function
+
 '===================== copy paste standard
 sub copyPasteStd
 	CH2.Range(Selection, Selection.End(xlDown)).Select
