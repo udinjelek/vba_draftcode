@@ -292,6 +292,8 @@ With Range("A1").EntireRow
     LastCell = .Cells(1, .Columns.Count).End(xlToLeft).Column
 End With
 
+Dim lastColumn As Long
+lastColumn = Sheet1.Cells(1, Columns.Count).End(xlToLeft).Column
 
 '===== duplicate formula for one row
 columnSelect = "A"
