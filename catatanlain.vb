@@ -245,6 +245,7 @@ Workbooks.Add ' new excel
 Application.ScreenUpdating = False 'view
 
 ActiveWorkbook.Save
+Application.DisplayAlerts = False
 ActiveWorkbook.SaveAs ThisWorkbook.Path & "\" & yourfilenameWithExt , fileformat:=51 
 ActiveWorkbook.SaveAs "C:\ron.xlsm", fileformat:=52 
 note:
