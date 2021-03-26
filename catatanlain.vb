@@ -580,6 +580,10 @@ Application.ScreenUpdating = False
 
 '=============== access
 
+sub refreshPivot()
+	ActiveWorkbook.RefreshAll
+end sub
+
 Sub timpaLinkChart()
 
     Dim oSl As Slide
