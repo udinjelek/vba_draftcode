@@ -99,6 +99,24 @@ Sub browse()
     Windows(nameFileMaster).Activate
 End sub
 
+'=============== browse single file, use useing call pathBrowse("B4")
+Private Sub pathBrowse(cellAddress)
+    Set targetCell = Application.ActiveSheet.Range(cellAddress)
+
+    With Application.FileDialog(msoFileDialogOpen)
+        .Title = "Select a File"
+        .Filters.Clear
+        .Filters.Add "Excel or Text Files", "*.xls;*.xlsx;*.csv;*.txt"
+        .AllowMultiSelect = False
+
+        If .Show = -1 Then
+            targetCell.Value = .SelectedItems(1)
+        End If
+    End With
+
+    Exit Sub
+End Sub
+						
 '=============== open file clasic multiple
 Sub OpenFileMultiple() 
     Dim lngCount As Long
